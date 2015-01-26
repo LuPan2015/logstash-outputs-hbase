@@ -19,9 +19,10 @@ Gem::Specification.new do |s|
 
   # Gem dependencies
   s.add_runtime_dependency 'logstash', '>= 1.4.0', '< 2.0.0'
-  s.add_development_dependency 'logstash-devutils'
-  s.add_runtime_dependency 'hbase-stargate'
   s.add_runtime_dependency 'logstash-codec-plain'
   s.add_runtime_dependency 'logstash-codec-json'
-  s.add_runtime_dependency 'patron'
+  s.add_runtime_dependency 'massive_record'
+  s.add_runtime_dependency 'activesupport'
+
+  s.add_development_dependency 'logstash-devutils'
 end
