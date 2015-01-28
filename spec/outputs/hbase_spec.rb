@@ -12,24 +12,24 @@ describe "outputs/hbase" do
     end
 end
 
-describe "ship lots of events to a file" do
-    config <<-CONFIG
-     input {
-       generator {
-	   message => {"c" => "v"}
-	   type => "generator"
-       }   
-     }   
-     output {
-       hbase {
-	   uri => "localhost:8080"
-	   table => "users"
-	   column_family => "cf1"
-       }   
-     }   
-    CONFIG
+#describe "ship lots of events to a file" do
+    #config <<-CONFIG
+     #input {
+       #generator {
+	   #message => {"c" => "v"}
+	   #type => "generator"
+       #}   
+     #}   
+     #output {
+       #hbase {
+	   #uri => "localhost:8080"
+	   #table => "users"
+	   #column_family => "cf1"
+       #}   
+     #}   
+    #CONFIG
 
-    agent do
-       puts "some testing"
-    end # agent
-end 
+    #agent do
+       #puts "some testing"
+    #end # agent
+#end 

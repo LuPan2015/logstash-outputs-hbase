@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = 'logstash-output-example'
+  s.name = 'logstash-output-hbase'
   s.version = '0.1.0'
   s.licenses = ['Apache License (2.0)']
   s.summary = "This example output does nothing."
@@ -21,8 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'logstash', '>= 1.4.0', '< 2.0.0'
   s.add_runtime_dependency 'logstash-codec-plain'
   s.add_runtime_dependency 'logstash-codec-json'
-  s.add_runtime_dependency 'massive_record'
-  s.add_runtime_dependency 'activesupport'
+  s.add_runtime_dependency 'hbase-stargate', '~> 1.5.5'
 
   s.add_development_dependency 'logstash-devutils'
 end
