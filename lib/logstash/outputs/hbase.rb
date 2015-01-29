@@ -25,5 +25,14 @@ class LogStash::Outputs::HBase < LogStash::Outputs::Base
 
     public
     def receive(event)
+	   event_hash = event.to_hash
+	   col_arr = []
+	   #store each column as the correct hash format
+	   event_hash.keys.each do |key|
+		  col_arr  = {:name => @column_family + ":" + key, :value => event_hash[key]} 
+	   end
+
+	   result = @client.create_row(@table, Random.rand, Time.now.to_i, col_arr); 
+	   puts result; 
     end
 end

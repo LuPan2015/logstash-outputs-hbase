@@ -17,6 +17,7 @@ describe "ship lots of events to a file" do
      input {
        generator {
 	   message => {"c" => "v"}
+	   count => 1
 	   type => "generator"
        }   
      }   

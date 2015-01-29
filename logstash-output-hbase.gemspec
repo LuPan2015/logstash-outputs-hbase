@@ -23,6 +23,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'logstash-codec-json'
   s.add_runtime_dependency 'massive_record'
   s.add_runtime_dependency 'activesupport'
-
+  s.add_development_dependency 'logstash-input-generator'
   s.add_development_dependency 'logstash-devutils'
 end
