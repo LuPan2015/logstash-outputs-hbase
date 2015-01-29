@@ -1,8 +1,7 @@
 # encoding: utf-8
 require "logstash/outputs/base"
 require "logstash/namespace"
-require "active_support"
-require 'massive_record'
+require 'stargate'
 
 class LogStash::Outputs::HBase < LogStash::Outputs::Base
     config_name 'hbase'
@@ -19,8 +18,7 @@ class LogStash::Outputs::HBase < LogStash::Outputs::Base
 
     public
     def register
-	 conn = MassiveRecord::Wrapper::Connection.new(:host => 'localhost', :port => 9090)
-	 conn.open
+	   client = Stargate::Client.new("http://localhost:8080")
     end
 
     public

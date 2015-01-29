@@ -29,8 +29,4 @@ describe "ship lots of events to a file" do
        }   
      }   
     CONFIG
-
-    agent do
-       puts "some testing"
-    end # agent
-end 
+end
